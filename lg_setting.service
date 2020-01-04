@@ -1,0 +1,9 @@
+[Unit]
+Description=Sets fn key lock and turns off trackpad led
+After=graphical.target suspend.target hibernate.target hybrid-sleep.target
+[Service]
+User=root
+ExecStart=/bin/bash /usr/bin/lg_settings.sh
+
+[Install]
+WantedBy=graphical.target suspend.target hibernate.target hybrid-sleep.target
